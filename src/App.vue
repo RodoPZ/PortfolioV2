@@ -7,8 +7,8 @@
 				<div class="max-w-5xl mx-auto">
 					<SkillsView />
 					<ProjectsView />
-					<CtaView />
 				</div>
+				<CtaView />
 			</main>
 			<FooterView />
 		</div>
