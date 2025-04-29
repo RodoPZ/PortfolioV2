@@ -1,70 +1,65 @@
 <template>
-	<div class="relative bg-white py-16 sm:py-24 lg:py-32">
+	<div class="relative bg-slate-800 pt-16 pb-8 sm:pt-24 lg:pt-32">
 		<div class="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
-			<h2 class="text-lg font-semibold text-cyan-600">Deploy faster</h2>
-			<p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Everything you need to deploy your app</p>
-			<p class="mx-auto mt-5 max-w-prose text-xl text-gray-500">Phasellus lorem quam molestie id quisque diam aenean nulla in. Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend condimentum id viverra nulla.</p>
-			<div class="mt-12">
-				<div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-				<div v-for="feature in features" :key="feature.name" class="pt-6">
-					<div class="flow-root rounded-lg bg-gray-50 px-6 pb-8">
-					<div class="-mt-6">
-						<div>
-						<span class="inline-flex items-center justify-center rounded-md bg-linear-to-r from-teal-500 to-cyan-600 p-3 shadow-lg">
-							<component :is="feature.icon" class="size-6 text-white" aria-hidden="true" />
-						</span>
-						</div>
-						<h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">{{ feature.name }}</h3>
-						<p class="mt-5 text-base text-gray-500">{{ feature.description }}</p>
+			<h2 class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Skills</h2>
+			<p class="mx-auto mt-5 text-xl text-white">In my role as a full-stack developer, I have accumulated experience in front-end development with React and Vue.js, as well as back-end development with Ruby. My dedication to continuous learning drives me to explore and adopt new technologies consistently.</p>
+			<h3 class="mt-12 text-2xl font-bold tracking-tight text-white">Languages</h3>
+			<ul role="list" class="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 mt-4">
+				<li v-for="project in projects" :key="project.name" class="col-span-1 flex items-center rounded-md shadow-xs border border-slate-600 bg-slate-700 px-2">
+					<img :src="`src/assets/logos/${project.icon}.svg`" alt="icon" class="w-12 h-12">
+					<div class="flex flex-col flex-1 items-start justify-between truncate px-4 py-2 text-sm">
+						<a :href="project.href" class="font-medium text-white hover:text-gray-600">{{ project.name }}</a>
+						<div class="text-sm text-gray-300">{{ project.message }}</div>
 					</div>
+				</li>
+			</ul>
+			<h3 class="mt-12 text-2xl font-bold tracking-tight text-white">Technologies</h3>
+			<ul role="list" class="grid grid-cols-2 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-6 mt-4">
+				<li v-for="technology in technologies" :key="technology.name" class="col-span-1 divide-y divide-slate-600 items-center rounded-md shadow-xs border border-slate-600 bg-slate-700 px-2">
+					<div class="px-4 py-5 sm:p-6 flex items-center justify-center">
+						<img :src="`src/assets/logos/${technology.icon}.svg`" alt="icon" class="w-12 h-12">
 					</div>
-				</div>
-				</div>
-			</div>
+					<div class="px-4 py-4 sm:px-6">
+						<p class="text-sm text-white">{{ technology.name }}</p>
+					</div>
+				</li>
+			</ul>
 		</div>
 	</div>
 </template>
 
 <script setup lang="ts">
-  import {
-	ArrowPathIcon,
-	CloudArrowUpIcon,
-	CogIcon,
-	LockClosedIcon,
-	ServerIcon,
-	ShieldCheckIcon,
-  } from '@heroicons/vue/24/outline'
-  const features = [
-	{
-	  name: 'Push to Deploy',
-	  description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi vitae lobortis.',
-	  icon: CloudArrowUpIcon,
-	},
-	{
-	  name: 'SSL Certificates',
-	  description: 'Qui aut temporibus nesciunt vitae dicta repellat sit dolores pariatur. Temporibus qui illum aut.',
-	  icon: LockClosedIcon,
-	},
-	{
-	  name: 'Simple Queues',
-	  description: 'Rerum quas incidunt deleniti quaerat suscipit mollitia. Amet repellendus ut odit dolores qui.',
-	  icon: ArrowPathIcon,
-	},
-	{
-	  name: 'Advanced Security',
-	  description: 'Ullam laboriosam est voluptatem maxime ut mollitia commodi. Et dignissimos suscipit perspiciatis.',
-	  icon: ShieldCheckIcon,
-	},
-	{
-	  name: 'Powerful API',
-	  description:
-		'Ab a facere voluptatem in quia corrupti veritatis aliquam. Veritatis labore quaerat ipsum quaerat id.',
-	  icon: CogIcon,
-	},
-	{
-	  name: 'Database Backups',
-	  description: 'Quia qui et est officia cupiditate qui consectetur. Ratione similique et impedit ea ipsum et.',
-	  icon: ServerIcon,
-	},
-  ]
+	const projects = [
+		{ name: 'JavaScript', icon: 'JavaScript', href: '#', message: '3 years of work experience' },
+		{ name: 'Ruby', icon: 'Ruby', href: '#', message: '2 years of work experience' },
+		{ name: 'Python', icon: 'Python', href: '#', message: 'Mostly used for scripting' },
+	]
+
+	const technologies = [
+		{ name: 'CSS', icon: 'CSS' },
+		{ name: 'HTML', icon: 'HTML' },
+		{ name: 'TypeScript', icon: 'TypeScript' },
+		{ name: 'React', icon: 'React' },
+		{ name: 'Native', icon: 'ReactNative' },
+		{ name: 'Vue.js', icon: 'Vue' },
+		{ name: 'Svelte', icon: 'Svelte' },
+		{ name: 'Expo', icon: 'Expo' },
+		{ name: 'Next.js', icon: 'Nextjs' },
+		{ name: 'Rails', icon: 'Rails' },
+		{ name: 'Redux', icon: 'Redux' },
+		{ name: 'Supabase', icon: 'Supabase' },
+		{ name: 'MySQL', icon: 'MySQL' },
+		{ name: 'Firebase', icon: 'Firebase' },
+		{ name: 'Bootstrap', icon: 'Bootstrap' },
+		{ name: 'Tailwind', icon: 'TailwindCSS' },
+		{ name: 'Sass', icon: 'Sass' },
+		{ name: 'Docker', icon: 'Docker' },
+		{ name: 'Figma', icon: 'Figma' },
+		{ name: 'Git', icon: 'Git' },
+		{ name: 'Godot', icon: 'Godot' },
+		{ name: 'Jest', icon: 'Jest' },
+		{ name: 'Windows', icon: 'Windows' },
+		{ name: 'Linux', icon: 'Linux' },
+		{ name: 'MacOS', icon: 'MacOS' },
+	]
 </script>

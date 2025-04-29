@@ -1,11 +1,14 @@
 <template>
-	<div class="bg-white w-screen">
+	<div class="bg-slate-800 w-screen">
 		<div class="relative overflow-hidden">
 			<HeaderView />
 			<main>
 				<HeroView />
-				<SkillsView />
-				<CtaView />
+				<div class="max-w-5xl mx-auto">
+					<SkillsView />
+					<ProjectsView />
+					<CtaView />
+				</div>
 			</main>
 			<FooterView />
 		</div>
@@ -17,5 +20,6 @@
 	import FooterView from '@/views/landing/FooterView.vue'
 	import HeroView from '@/views/landing/HeroView.vue'
 	import SkillsView from '@/views/landing/SkillsView.vue'
+	import ProjectsView from '@/views/landing/ProjectsView.vue'
 	import CtaView from '@/views/landing/CtaView.vue'
 </script>
