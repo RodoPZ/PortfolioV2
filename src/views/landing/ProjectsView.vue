@@ -1,5 +1,5 @@
 <template>
-	<div class="relative bg-slate-80 py-8">
+	<div class="relative bg-slate-80 py-15">
 		<div class="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
 			<h2 class="mt-2 text-3xl font-bold tracking-tight text-primary sm:text-4xl">Projects</h2>
 			<p class="mx-auto mt-5 text-xl text-white">Throughout my career, I have undertaken various personal projects that reflect my passion and skills as a developer.</p>

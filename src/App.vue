@@ -1,17 +1,15 @@
 <template>
-	<div class="bg-slate-800 w-screen">
-		<div class="relative overflow-hidden">
-			<HeaderView />
-			<main>
-				<HeroView />
-				<div class="max-w-5xl mx-auto">
-					<SkillsView />
-					<ProjectsView />
-				</div>
-				<CtaView />
-			</main>
-			<FooterView />
-		</div>
+	<div class="bg-slate-800 min-h-screen">
+		<HeaderView />
+		<main>
+			<HeroView id="Hero"/>
+			<div class="max-w-5xl mx-auto">
+				<SkillsView id="Skills"/>
+				<ProjectsView id="Projects"/>
+			</div>
+			<CtaView id="Contact"/>
+		</main>
+		<FooterView />
 	</div>
 </template>
   

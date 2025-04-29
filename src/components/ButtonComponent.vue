@@ -13,7 +13,7 @@
 			[tertiaryClasses]: variant === BUTTON_VARIANT.TERTIARY,
 			[outlineClasses]: variant === BUTTON_VARIANT.OUTLINE,
 		}" 
-		@click="onClick"
+		@click="$emit('click')"
 	>
 		<slot />
 	</component>

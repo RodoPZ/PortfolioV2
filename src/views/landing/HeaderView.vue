@@ -1,6 +1,6 @@
 <template>
-	<Popover as="header" class="relative">
-		<div class="bg-slate-800 py-4">
+	<Popover as="header">
+		<div class="fixed top-0 left-0 right-0 z-50 bg-slate-800 py-4 border-b border-gray-700">
 		<nav class="relative mx-auto flex max-w-7xl items-center justify-between px-6" aria-label="Global">
 			<div class="flex flex-1 items-center">
 			<div class="flex w-full items-center justify-between md:w-auto">
@@ -16,7 +16,7 @@
 				</div>
 			</div>
 			<div class="hidden space-x-8 md:ml-10 md:flex">
-				<ButtonComponent :variant="BUTTON_VARIANT.TERTIARY" v-for="item in navigation" :key="item.name" :href="item.href">
+				<ButtonComponent :variant="BUTTON_VARIANT.TERTIARY" v-for="item in navigation" :key="item.name" @click="scrollToSection(item.location)">
 					{{ item.name }}
 				</ButtonComponent>
 			</div>
@@ -50,7 +50,12 @@
 			</div>
 			<div class="pt-5 pb-6">
 				<div class="space-y-1 px-2 flex flex-col gap-2 justify-center items-center">
-					<ButtonComponent :variant="BUTTON_VARIANT.TERTIARY" v-for="item in navigation" :key="item.name" :href="item.href">
+					<ButtonComponent 
+						:variant="BUTTON_VARIANT.TERTIARY" 
+						v-for="item in navigation" 
+						:key="item.name" 
+						@click="console.log(item.location)"
+					>
 						{{ item.name }}
 					</ButtonComponent>
 					<ButtonComponent :variant="BUTTON_VARIANT.OUTLINE" >
@@ -75,9 +80,16 @@
   import { BUTTON_VARIANT } from '@/types'
 
   const navigation = [
-	{ name: 'About', href: '#' },
-	{ name: 'Skills', href: '#' },
-	{ name: 'Projects', href: '#' },
-	{ name: 'Contact Me!', href: '#' },
+	{ name: 'About', location: 'Hero' },
+	{ name: 'Skills', location: 'Skills' },
+	{ name: 'Projects', location: 'Projects' },
+	{ name: 'Contact Me!', location: 'Contact' },
   ]
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
 </script>
