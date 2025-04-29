@@ -1,7 +1,7 @@
 <template>
-	<div class="relative bg-slate-80 pt-8">
+	<div class="relative bg-slate-80 py-8">
 		<div class="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
-			<h2 class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Projects</h2>
+			<h2 class="mt-2 text-3xl font-bold tracking-tight text-primary sm:text-4xl">Projects</h2>
 			<p class="mx-auto mt-5 text-xl text-white">Throughout my career, I have undertaken various personal projects that reflect my passion and skills as a developer.</p>
 			<ul role="list" class="grid grid-cols-2 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 mt-4">
 				<li v-for="project in projects" :key="project.name" class="col-span-1 items-center rounded-md shadow-xs border border-slate-600 bg-slate-700 px-2">

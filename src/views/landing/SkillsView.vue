@@ -1,7 +1,7 @@
 <template>
 	<div class="relative bg-slate-800 pt-16 pb-8 sm:pt-24 lg:pt-32">
 		<div class="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
-			<h2 class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Skills</h2>
+			<h2 class="mt-2 text-3xl font-bold tracking-tight text-primary sm:text-4xl">Skills</h2>
 			<p class="mx-auto mt-5 text-xl text-white">In my role as a full-stack developer, I have accumulated experience in front-end development with React and Vue.js, as well as back-end development with Ruby. My dedication to continuous learning drives me to explore and adopt new technologies consistently.</p>
 			<h3 class="mt-12 text-2xl font-bold tracking-tight text-white">Languages</h3>
 			<ul role="list" class="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 mt-4">
