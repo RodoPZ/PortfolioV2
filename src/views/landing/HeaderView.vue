@@ -4,10 +4,9 @@
 		<nav class="relative mx-auto flex max-w-7xl items-center justify-between px-6" aria-label="Global">
 			<div class="flex flex-1 items-center">
 			<div class="flex w-full items-center justify-between md:w-auto">
-				<a href="#">
-				<span class="sr-only">Your Company</span>
-				<img class="h-8 w-auto sm:h-10" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?from-color=teal&from-shade=200&to-color=cyan&to-shade=400&toShade=400" alt="" />
-				</a>
+				<p class="text-primary text-2xl font-bold">					
+					&lt;RodoPZ/&gt;
+				</p>
 				<div class="-mr-2 flex items-center md:hidden">
 				<PopoverButton class="focus-ring-inset relative inline-flex items-center justify-center rounded-md bg-gray-900 p-2 text-gray-400 hover:bg-gray-800 focus:ring-2 focus:ring-white focus:outline-hidden">
 					<span class="absolute -inset-0.5" />

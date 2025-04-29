@@ -3,3 +3,7 @@
 @theme {
 	--color-primary: #fdca40;
 }
+
+:root {
+	background-color: var(--color-slate-800);
+}

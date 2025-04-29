@@ -14,7 +14,7 @@
 				</li>
 			</ul>
 			<h3 class="mt-12 text-2xl font-bold tracking-tight text-white">Technologies</h3>
-			<ul role="list" class="grid grid-cols-2 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-6 mt-4">
+			<ul role="list" class="grid grid-cols-2 gap-5 sm:grid-cols-3 sm:gap-6 lg:grid-cols-6 mt-4">
 				<li v-for="technology in technologies" :key="technology.name" class="col-span-1 divide-y divide-slate-600 items-center rounded-md shadow-xs border border-slate-600 bg-slate-700 px-2">
 					<div class="px-4 py-5 sm:p-6 flex items-center justify-center">
 						<img :src="`src/assets/logos/${technology.icon}.svg`" alt="icon" class="w-12 h-12">

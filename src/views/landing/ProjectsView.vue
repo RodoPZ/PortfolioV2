@@ -3,49 +3,51 @@
 		<div class="mx-auto max-w-md px-6 text-center sm:max-w-3xl lg:max-w-7xl lg:px-8">
 			<h2 class="mt-2 text-3xl font-bold tracking-tight text-primary sm:text-4xl">Projects</h2>
 			<p class="mx-auto mt-5 text-xl text-white">Throughout my career, I have undertaken various personal projects that reflect my passion and skills as a developer.</p>
-			<ul role="list" class="grid grid-cols-2 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 mt-4">
-				<li v-for="project in projects" :key="project.name" class="col-span-1 items-center rounded-md shadow-xs border border-slate-600 bg-slate-700 px-2">
+			<ul role="list" class="grid gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 mt-4">
+				<li v-for="project in projects" :key="project.name" class="col-span-1 flex flex-col rounded-md shadow-xs bg-slate-700 px-2">
 					<div class="py-2">
 						<img :src="project.image" alt="Project Image" class="w-full h-48 object-cover rounded-md">
 					</div>
-					<div class="py-2 flex flex-col gap-2 text-left">
+					<div class="py-2 flex flex-col gap-2 text-left flex-1 justify-between">
 						<div class="flex flex-row justify-between">
-							<h3 class="text-xl font-medium leading-6 text-white">{{ project.name }}</h3>
+							<h3 class="text-xl font-medium leading-6 text-primary">{{ project.name }}</h3>
 							<div class="mt-1 text-lg text-gray-500">
 								{{ project.emojis }}
 							</div>
 						</div>
-						<p class="text-gray-200 text-sm pb-2" >{{ project.text }}</p>
-						<div class="flex flex-row flex-wrap gap-2 w-full">
-							<span
-								v-for="tag in project.tags"
-								:key="tag"
-								class="flex-1 inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-white ring-1 ring-inset"
-								:style="{ '--tw-ring-color': stringToColor(tag, 1) }"
-							>
-								<svg
-									class="size-1.5"
-									:style="{ fill: stringToColor(tag, 1) }"
-									viewBox="0 0 6 6"
-									aria-hidden="true"
+						<p class="text-gray-200 text-sm h-full" >{{ project.text }}</p>
+						<div class="flex flex-col gap-2">
+							<div class="flex flex-row flex-wrap gap-2">
+								<span
+									v-for="tag in project.tags"
+									:key="tag"
+									class="flex-1 inline-flex items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-white ring-1 ring-inset"
+									:style="{ '--tw-ring-color': stringToColor(tag, 1) }"
 								>
-									<circle cx="3" cy="3" r="3" />
-								</svg>
-								{{ tag }}
-							</span>
-						</div>
-						<div class="flex flex-row gap-2">
-							<ButtonComponent 
-								v-for="link in project.links" 
-								size="sm" 
-								:key="link.type" 
-								:href="link.href" 
-								:variant="BUTTON_VARIANT.OUTLINE" 
-								:icon="link.type === 'Docs' ? 'Document' : 'ArrowTopRightOnSquareIcon'"
-								>
-								{{ link.type }}
-								<ArrowTopRightOnSquareIcon class="size-4" />
-							</ButtonComponent>
+									<svg
+										class="size-1.5"
+										:style="{ fill: stringToColor(tag, 1) }"
+										viewBox="0 0 6 6"
+										aria-hidden="true"
+									>
+										<circle cx="3" cy="3" r="3" />
+									</svg>
+									{{ tag }}
+								</span>
+							</div>
+							<div class="flex flex-row gap-2 mt-1">
+								<ButtonComponent 
+									v-for="link in project.links" 
+									size="sm" 
+									:key="link.type" 
+									:href="link.href" 
+									:variant="BUTTON_VARIANT.OUTLINE" 
+									:icon="link.type === 'Docs' ? 'Document' : 'ArrowTopRightOnSquareIcon'"
+									>
+									{{ link.type }}
+									<ArrowTopRightOnSquareIcon class="size-4" />
+								</ButtonComponent>
+							</div>
 						</div>
 					</div>
 				</li>
@@ -68,9 +70,19 @@
 			], 
 			image: "/src/assets/images/TT.png" 
 		},
-		{ name: 'Portfolio', emojis: '💼🖥️', 
+		{ name: 'Portfolio V1', emojis: '📁📼', 
+			text: "The first version of my portfolio, built with Vue and Scss and Bootstrap, eventually it turned into a mess, so I decided to start from scratch and create this one.", 
+			tags: ['Vue', "Sass", "Bootstrap"], 
+			links: [
+				{type: "GitHub", href: "https://github.com/RodoPZ/Portfolio"}, 
+				{type: "Figma", href: "https://www.figma.com/file/ZjCFBtm0rJQJZPk1BGDG5p/Portfolio?type=design&node-id=43-91&mode=design"}
+
+			], 
+			image: "/src/assets/images/PortfolioV1.png" 
+		},
+		{ name: 'Portfolio V2', emojis: '💼🖥️', 
 			text: "My portfolio... This portfolio! Built with Vue, created to showcase my projects and knowledge to the world.", 
-			tags: ['Vue', "TypeScript", "Sass", "Bootstrap"], 
+			tags: ['Vue', "TypeScript", "TailwindCSS"], 
 			links: [
 				{type: "GitHub", href: "https://github.com/RodoPZ/Portfolio"}, 
 				{type: "Figma", href: "https://www.figma.com/file/ZjCFBtm0rJQJZPk1BGDG5p/Portfolio?type=design&node-id=43-91&mode=design"}

@@ -1,5 +1,5 @@
 <template>
-	<div class="bg-slate-700 pt-10 sm:pt-16 lg:overflow-hidden lg:pt-8 lg:pb-14">
+	<div class="bg-slate-700 pb-10 pt-10 sm:pt-16 lg:overflow-hidden lg:pt-8 lg:pb-14">
 		<div class="mx-auto max-w-7xl lg:px-8">
 			<div class="mx-auto max-w-md px-6 sm:max-w-2xl sm:text-center lg:flex lg:items-center lg:px-0 lg:text-left">
 				<div class="lg:py-24 flex flex-col items-center text-center">
