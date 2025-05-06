@@ -1,0 +1,72 @@
+{
+    "general": {
+      "resume": "Currículum"
+    },
+    "navbar": {
+      "about": "Acerca de",
+      "skills": "Habilidades",
+      "projects": "Proyectos",
+      "contactme": "¡Contáctame!"
+    },
+    "hero": {
+      "RodolfoPinedoSuarez": "Rodolfo Pinedo Suárez",
+      "FullStackDeveloper": "Desarrollador Full Stack",
+      "description": "Soy un desarrollador Full Stack con experiencia en React y Ruby, apasionado por el desarrollo web. Siempre estoy listo para aprender nuevas tecnologías y habilidades, ya sea para un proyecto o como hobby."
+    },
+    "skills": {
+      "skills": "Habilidades",
+      "description": "En mi rol como desarrollador full-stack, he acumulado experiencia en desarrollo front-end con React y Vue.js, así como en desarrollo back-end con Ruby. Mi dedicación al aprendizaje continuo me impulsa a explorar y adoptar nuevas tecnologías constantemente.",
+      "languages": "lenguajes",
+      "yearsOfWorkExperience": "{count} años de experiencia laboral",
+      "mostlyUsedForScripting": "Principalmente usado para scripting"
+    },
+    "projects": {
+      "projects": "Proyectos",
+      "description": "A lo largo de mi carrera, he emprendido varios proyectos personales que reflejan mi pasión y habilidades como desarrollador.",
+      "projectList": {
+        "1": {
+          "description": "Mi proyecto de tesis de licenciatura, destinado a ayudar a personas mayores a recordar tomar sus medicamentos."
+        },
+        "2": {
+          "description": "La primera versión de mi portafolio, construida con Vue, Scss y Bootstrap, eventualmente se convirtió en un desastre, así que decidí empezar desde cero y crear este."
+        },
+        "3": {
+          "description": "Mi portafolio... ¡Este portafolio! Construido con Vue, creado para mostrar mis proyectos y conocimientos al mundo."
+        },
+        "4": {
+          "description": "Aplicación meteorológica que te permite verificar las condiciones climáticas en cualquier parte del mundo utilizando la API 'WeatherApi'."
+        },
+        "5": {
+          "description": "Aplicación web clon de Instagram para mascotas, construida para practicar mis habilidades con React."
+        },
+        "6": {
+          "description": "Aplicación web que te permite buscar películas y series. Desarrollada utilizando la API 'TMDB'."
+        },
+        "7": {
+          "description": "Aplicación web simple que te permite gestionar tus finanzas personales. Desarrollada con Vue."
+        },
+        "8": {
+          "description": "Aplicación de tareas desarrollada con React, esta fue mi primera aplicación web usando React."
+        },
+        "9": {
+          "description": "Esta es una de las primeras páginas que hice, fue creada usando HTML y CSS puros, siguiendo un curso de Platzi."
+        },
+        "10": {
+          "description": "Juego de defensa de torres donde defiendes tu granja de monstruos malvados, creado con el motor Godot y GDScript."
+        },
+        "11": {
+          "description": "Juego clicker donde extraes minerales y los vendes para comprar mejoras con una estética de Gameboy. Tiene más de 2000 visitas en itch.io y newgrounds."
+        },
+        "12": {
+          "description": "Roguelike de 8 bits con mecánicas de oscuridad donde debes recolectar llaves para escapar del calabozo. Ganamos el tercer lugar en el game jam Mini Jam 98 con este juego."
+        }
+      }
+    },
+    "contact": {
+      "contactMe": "¡Contáctame!",
+      "description": "Hola. Gracias por revisar mi portafolio. Si tienes preguntas, sugerencias o quieres contactarme, no dudes en visitar los enlaces de abajo. ¡Me encantaría saber de ti!"
+    },
+    "footer": {
+      "description": "Diseñado y construido por RodoPZ usando Vue, TS y Tailwind"
+    }
+}

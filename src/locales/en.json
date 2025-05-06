@@ -1,0 +1,72 @@
+{
+	"general": {
+		"resume": "Resume"
+	},
+	"navbar": {
+		"about": "About",
+		"skills": "Skills",
+		"projects": "Projects",
+		"contactme": "Contact me!"
+	},
+	"hero": {
+		"RodolfoPinedoSuarez": "Rodolfo Pinedo Suárez",
+		"FullStackDeveloper": "Full Stack Developer",
+		"description": "I am a Full Stack developer with experience in React and Ruby, passionate about web development. I am always ready to learn new technologies and skills, whether for a project or as a hobby."
+	},
+	"skills": {
+		"skills": "Habilidades",
+		"description": "In my role as a full-stack developer, I have accumulated experience in front-end development with React and Vue.js, as well as back-end development with Ruby. My dedication to continuous learning drives me to explore and adopt new technologies consistently.",
+		"languages": "languages",
+		"yearsOfWorkExperience": "{count} years of work experience",
+		"mostlyUsedForScripting": "Mostly used for scripting"
+	},
+	"projects": {
+		"projects": "Projects",
+		"description": "Throughout my career, I have undertaken various personal projects that reflect my passion and skills as a developer.",
+		"projectList": {
+			"1": {
+				"description": "My undergraduate thesis project, aimed at helping elderly individuals remember to take their medications."
+			},
+			"2": {
+				"description": "The first version of my portfolio, built with Vue and Scss and Bootstrap, eventually it turned into a mess, so I decided to start from scratch and create this one."
+			},
+			"3": {
+				"description": "My portfolio... This portfolio! Built with Vue, created to showcase my projects and knowledge to the world."
+			},
+			"4": {
+				"description": "Weather application that allows you to check the weather conditions anywhere in the world using the 'WeatherApi' API."
+			},
+			"5": {
+				"description": "Instagram clone web application for pets built to practice my skills with React."
+			},
+			"6": {
+				"description": "Web application that allows you to search for movies and series. Developed using the 'TMDB API'."
+			},
+			"7": {
+				"description": "Simple web application that allows you to manage your personal finances. Developed using Vue."
+			},
+			"8": {
+				"description": "Task application developed using React, this was my first web application using React."
+			},
+			"9": {
+				"description": "This is one of the first pages I made, it was created using pure HTML and CSS, following a Platzi course."
+			},
+			"10": {
+				"description": "Tower defense game where you defend your farm from evil monsters, created using the Godot engine and GDScript."
+			},
+			"11": {
+				"description": "Clicker game where you mine minerals and sell them to buy upgrades with a Gameboy aesthetic. It has over 2000 views on itch.io and newgrounds."
+			},
+			"12": {
+				"description": "8-bit Godot roguelike with darkness mechanics where you have to collect keys to escape from the dungeon. We won third place in the Mini Jam 98 game jam with this game."
+			}
+		}
+	},
+	"contact": {
+		"contactMe": "Contact me!",
+		"description": "Hi. Thanks for checking out my portfolio. If you have any questions, suggestions, or want to get in touch, feel free to visit the links below. I would love to hear from you! "
+	},
+	"footer": {
+		"description": "Designed and built by RodoPZ using Vue, TS and Tailwind"
+	}
+}
