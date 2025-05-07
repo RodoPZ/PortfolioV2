@@ -5,7 +5,7 @@
 			<div class="xl:gap-3 flex flex-col items-center">
 				<h1 class="text-2xl font-bold text-primary lg:text-4xl">&lt;RodoPZ/&gt;</h1>
 				<p class="text-base text-white text-center">
-					Designed and built by RodoPZ using Vue, TS and Tailwind
+					{{ $t('footer.description') }}
 				</p>
 			</div>
 		</div>

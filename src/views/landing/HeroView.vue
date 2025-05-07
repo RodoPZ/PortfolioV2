@@ -8,16 +8,14 @@
 					<h1
 						class="mt-4 text-4xl font-bold tracking-tight text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl"
 					>
-						<span class="block text-primary">Rodolfo Pinedo Suárez</span>
+						<span class="block text-primary">{{ $t('hero.name') }}</span>
 						<span
 							class="block bg-linear-to-r from-teal-200 to-cyan-400 bg-clip-text pb-3 text-transparent sm:pb-5"
-							>Full Stack Developer</span
+							>{{ $t('hero.title') }}</span
 						>
 					</h1>
-					<p class="text-base text-gray-300 sm:text-xl lg:text-lg xl:text-xl">
-						I am a Full Stack developer with experience in React and Ruby, passionate
-						about web development. I am always ready to learn new technologies and
-						skills, whether for a project or as a hobby.
+					<p class="text-base text-white sm:text-xl lg:text-lg xl:text-xl">
+						{{ $t('hero.description') }}
 					</p>
 					<div class="flex gap-1 mt-4 pb-3">
 						<ButtonComponent :variant="BUTTON_VARIANT.TERTIARY">
@@ -30,7 +28,9 @@
 							<GithubIcon size="32" />
 						</ButtonComponent>
 					</div>
-					<ButtonComponent :variant="BUTTON_VARIANT.OUTLINE"> Resume </ButtonComponent>
+					<ButtonComponent :variant="BUTTON_VARIANT.OUTLINE">
+						{{ $t('general.resume') }}
+					</ButtonComponent>
 				</div>
 			</div>
 		</div>

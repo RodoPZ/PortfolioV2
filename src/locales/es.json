@@ -9,16 +9,16 @@
       "contactme": "¡Contáctame!"
     },
     "hero": {
-      "RodolfoPinedoSuarez": "Rodolfo Pinedo Suárez",
-      "FullStackDeveloper": "Desarrollador Full Stack",
+      "name": "Rodolfo Pinedo Suárez",
+      "title": "Desarrollador Full Stack",
       "description": "Soy un desarrollador Full Stack con experiencia en React y Ruby, apasionado por el desarrollo web. Siempre estoy listo para aprender nuevas tecnologías y habilidades, ya sea para un proyecto o como hobby."
     },
     "skills": {
       "skills": "Habilidades",
-      "description": "En mi rol como desarrollador full-stack, he acumulado experiencia en desarrollo front-end con React y Vue.js, así como en desarrollo back-end con Ruby. Mi dedicación al aprendizaje continuo me impulsa a explorar y adoptar nuevas tecnologías constantemente.",
-      "languages": "lenguajes",
+      "description": "En mi rol como desarrollador full-stack, he acumulado experiencia en desarrollo front-end con React, Svelte y Vue.js, así como en desarrollo back-end con Ruby. Mi dedicación al aprendizaje continuo me impulsa a explorar y adoptar nuevas tecnologías constantemente.",
+      "languages": "Lenguajes",
       "yearsOfWorkExperience": "{count} años de experiencia laboral",
-      "mostlyUsedForScripting": "Principalmente usado para scripting"
+      "mostlyUsedForScripting": "Usado para scripting"
     },
     "projects": {
       "projects": "Proyectos",
