@@ -85,6 +85,62 @@ const { t } = useI18n()
 
 const projects = computed(() => [
 	{
+		name: 'Farm Defence',
+		emojis: '🐮💀',
+		text: t('projects.projectList.10.description'),
+		tags: ['Godot'],
+		links: [
+			{ type: 'GitHub', href: 'https://github.com/RodoPZ/Farm-Defense' },
+			{ type: 'Web', href: 'https://croobat.itch.io/farm-defense' },
+		],
+		image: '/src/assets/images/FarmDefence.png',
+	},
+	{
+		name: 'Clicker Miner',
+		emojis: '⛏️🧨',
+		text: t('projects.projectList.11.description'),
+		tags: ['Godot'],
+		links: [
+			{ type: 'GitHub', href: 'https://github.com/RodoPZ/ClickerMiner' },
+			{ type: 'Web', href: 'https://croobat.itch.io/clicker-miner' },
+		],
+		image: '/src/assets/images/ClickerMiner.png',
+	},
+	{
+		name: 'Lacking Light',
+		emojis: '🔦👻',
+		text: t('projects.projectList.12.description'),
+		tags: ['Godot'],
+		links: [
+			{ type: 'GitHub', href: 'https://github.com/croobat/lacking-light' },
+			{ type: 'Web', href: 'https://croobat.itch.io/lacking-light' },
+		],
+		image: '/src/assets/images/LackingLight.png',
+	},
+	{
+		name: 'Portfolio V1',
+		emojis: '📁📼',
+		text: t('projects.projectList.2.description'),
+		tags: ['Vue', 'Sass', 'Bootstrap'],
+		links: [
+			{ type: 'GitHub', href: 'https://github.com/RodoPZ/Portfolio' },
+			{
+				type: 'Figma',
+				href: 'https://www.figma.com/file/ZjCFBtm0rJQJZPk1BGDG5p/Portfolio?type=design&node-id=43-91&mode=design',
+			},
+			{ type: 'Web', href: 'https://rodopz.github.io/Portfolio/' },
+		],
+		image: '/src/assets/images/PortfolioV1.png',
+	},
+	{
+		name: 'Portfolio V2',
+		emojis: '💼🖥️',
+		text: t('projects.projectList.3.description'),
+		tags: ['Vue', 'TypeScript', 'TailwindCSS'],
+		links: [{ type: 'GitHub', href: 'https://github.com/RodoPZ/PortfolioV2' }],
+		image: '/src/assets/images/Portfolio.png',
+	},
+	{
 		name: 'TT',
 		emojis: '👨‍🏫🧑‍🎓',
 		text: t('projects.projectList.1.description'),
@@ -99,43 +155,15 @@ const projects = computed(() => [
 		image: '/src/assets/images/TT.png',
 	},
 	{
-		name: 'Portfolio V1',
-		emojis: '📁📼',
-		text: t('projects.projectList.2.description'),
-		tags: ['Vue', 'Sass', 'Bootstrap'],
-		links: [
-			{ type: 'GitHub', href: 'https://github.com/RodoPZ/Portfolio' },
-			{
-				type: 'Figma',
-				href: 'https://www.figma.com/file/ZjCFBtm0rJQJZPk1BGDG5p/Portfolio?type=design&node-id=43-91&mode=design',
-			},
-		],
-		image: '/src/assets/images/PortfolioV1.png',
-	},
-	{
-		name: 'Portfolio V2',
-		emojis: '💼🖥️',
-		text: t('projects.projectList.3.description'),
-		tags: ['Vue', 'TypeScript', 'TailwindCSS'],
-		links: [
-			{ type: 'GitHub', href: 'https://github.com/RodoPZ/Portfolio' },
-			{
-				type: 'Figma',
-				href: 'https://www.figma.com/file/ZjCFBtm0rJQJZPk1BGDG5p/Portfolio?type=design&node-id=43-91&mode=design',
-			},
-		],
-		image: '/src/assets/images/Portfolio.png',
-	},
-	{
 		name: 'Weather App',
 		emojis: '🌥️🌡️',
 		text: t('projects.projectList.4.description'),
 		tags: ['React', 'TypeScript', 'Sass', 'API REST', 'Redux'],
 		links: [
-			{ type: 'GitHub', href: 'https://github.com/RodoPZ/Portfolio' },
+			{ type: 'GitHub', href: 'https://github.com/RodoPZ/Weather-app' },
 			{
 				type: 'Figma',
-				href: 'https://www.figma.com/file/ZjCFBtm0rJQJZPk1BGDG5p/Portfolio?type=design&node-id=43-91&mode=design',
+				href: 'https://www.figma.com/file/ZvTvLQcGVRZ1WK3TvOhoPE/WeatherApp?node-id=153%3A1517&t=cfZoUY3MYBtGm4dv-1',
 			},
 			{ type: 'Web', href: 'https://rodopz-weatherapp.netlify.app/London' },
 		],
@@ -199,39 +227,6 @@ const projects = computed(() => [
 			{ type: 'Web', href: 'https://rodopz.github.io/Platzi-conf/' },
 		],
 		image: '/src/assets/images/PlatziConf.png',
-	},
-	{
-		name: 'Farm Defence',
-		emojis: '🐮💀',
-		text: t('projects.projectList.10.description'),
-		tags: ['Godot'],
-		links: [
-			{ type: 'GitHub', href: 'https://github.com/RodoPZ/Farm-Defense' },
-			{ type: 'Web', href: 'https://croobat.itch.io/farm-defense' },
-		],
-		image: '/src/assets/images/FarmDefence.png',
-	},
-	{
-		name: 'Clicker Miner',
-		emojis: '⛏️🧨',
-		text: t('projects.projectList.11.description'),
-		tags: ['Godot'],
-		links: [
-			{ type: 'GitHub', href: 'https://github.com/RodoPZ/ClickerMiner' },
-			{ type: 'Web', href: 'https://croobat.itch.io/clicker-miner' },
-		],
-		image: '/src/assets/images/ClickerMiner.png',
-	},
-	{
-		name: 'Lacking Light',
-		emojis: '🔦👻',
-		text: t('projects.projectList.12.description'),
-		tags: ['Godot'],
-		links: [
-			{ type: 'GitHub', href: 'https://github.com/croobat/lacking-light' },
-			{ type: 'Web', href: 'https://croobat.itch.io/lacking-light' },
-		],
-		image: '/src/assets/images/LackingLight.png',
 	},
 ])
 

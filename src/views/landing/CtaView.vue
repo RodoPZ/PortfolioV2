@@ -8,13 +8,19 @@
 				{{ $t('contact.description') }}
 			</p>
 			<div class="flex gap-1 mt-4 pb-3">
-				<ButtonComponent :variant="BUTTON_VARIANT.TERTIARY">
+				<ButtonComponent
+					:variant="BUTTON_VARIANT.TERTIARY"
+					href="https://www.linkedin.com/in/rodopz/"
+				>
 					<LinkedinIcon size="32" />
 				</ButtonComponent>
-				<ButtonComponent :variant="BUTTON_VARIANT.TERTIARY">
+				<ButtonComponent :variant="BUTTON_VARIANT.TERTIARY" @click="openEmail()">
 					<MailIcon size="32" />
 				</ButtonComponent>
-				<ButtonComponent :variant="BUTTON_VARIANT.TERTIARY">
+				<ButtonComponent
+					:variant="BUTTON_VARIANT.TERTIARY"
+					href="https://github.com/RodoPZ"
+				>
 					<GithubIcon size="32" />
 				</ButtonComponent>
 			</div>
@@ -26,4 +32,8 @@
 import ButtonComponent from '@/components/ButtonComponent.vue'
 import { LinkedinIcon, MailIcon, GithubIcon } from '@/assets/icons'
 import { BUTTON_VARIANT } from '@/types'
+
+const openEmail = () => {
+	window.open('mailto:rpinedo2799+bussines@gmail.com', '_blank')
+}
 </script>

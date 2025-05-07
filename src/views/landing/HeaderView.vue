@@ -41,7 +41,7 @@
 						<LanguageIcon class="size-5" aria-hidden="true" />
 						{{ locale === LANGUAGE.ES ? 'ES' : 'EN' }}
 					</ButtonComponent>
-					<ButtonComponent>
+					<ButtonComponent @click="downloadResume()">
 						{{ t('general.resume') }}
 					</ButtonComponent>
 				</div>
@@ -97,7 +97,7 @@
 							<LanguageIcon class="size-5" aria-hidden="true" />
 							{{ locale === LANGUAGE.ES ? 'ES' : 'EN' }}
 						</ButtonComponent>
-						<ButtonComponent @click="toggleLanguage()">
+						<ButtonComponent @click="downloadResume()">
 							{{ t('general.resume') }}
 						</ButtonComponent>
 					</div>
@@ -139,5 +139,13 @@ const scrollToSection = (sectionId: string, close = () => {}) => {
 		element.scrollIntoView({ behavior: 'smooth' })
 		close()
 	}
+}
+
+const downloadResume = () => {
+	const ESP_RESUME_ID = '1aFqOlkZd7NWRdQxCVgBmezFkiHt43AH2'
+	const ENG_RESUME_ID = '1rDCtdbiSRMxAAeqGSDDnPjE14nsiudEu'
+	const resumeId = locale.value === LANGUAGE.EN ? ENG_RESUME_ID : ESP_RESUME_ID
+
+	window.location.href = `https://drive.google.com/file/d/${resumeId}/view?usp=sharing`
 }
 </script>
