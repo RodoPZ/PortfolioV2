@@ -39,9 +39,9 @@
 				<div class="hidden lg:flex lg:items-center lg:space-x-5">
 					<ButtonComponent :variant="BUTTON_VARIANT.OUTLINE" @click="toggleLanguage()">
 						<LanguageIcon class="size-5" aria-hidden="true" />
-						{{ locale === LANGUAGE.ES ? 'ES' : 'EN' }}
+						{{ locale === 'es' ? 'ES' : 'EN' }}
 					</ButtonComponent>
-					<ButtonComponent @click="downloadResume()">
+					<ButtonComponent @click="downloadResume(locale as LANGUAGE)">
 						{{ t('general.resume') }}
 					</ButtonComponent>
 				</div>
@@ -95,9 +95,9 @@
 							@click="toggleLanguage()"
 						>
 							<LanguageIcon class="size-5" aria-hidden="true" />
-							{{ locale === LANGUAGE.ES ? 'ES' : 'EN' }}
+							{{ locale === 'es' ? 'ES' : 'EN' }}
 						</ButtonComponent>
-						<ButtonComponent @click="downloadResume()">
+						<ButtonComponent @click="downloadResume(locale as LANGUAGE)">
 							{{ t('general.resume') }}
 						</ButtonComponent>
 					</div>
@@ -112,18 +112,15 @@ import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon, LanguageIcon } from '@heroicons/vue/24/outline'
 import ButtonComponent from '@/components/ButtonComponent.vue'
 import { BUTTON_VARIANT } from '@/types'
+import type { LANGUAGE } from '@/types'
 import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
+import { downloadResume } from '@/utils/index.ts'
 
 const { t, locale } = useI18n({ useScope: 'global' })
 
-enum LANGUAGE {
-	ES = 'es',
-	EN = 'en',
-}
-
 const toggleLanguage = () => {
-	locale.value = locale.value === LANGUAGE.ES ? LANGUAGE.EN : LANGUAGE.ES
+	locale.value = locale.value === 'es' ? 'en' : 'es'
 }
 
 const navigation = computed(() => [
@@ -139,13 +136,5 @@ const scrollToSection = (sectionId: string, close = () => {}) => {
 		element.scrollIntoView({ behavior: 'smooth' })
 		close()
 	}
-}
-
-const downloadResume = () => {
-	const ESP_RESUME_ID = '1aFqOlkZd7NWRdQxCVgBmezFkiHt43AH2'
-	const ENG_RESUME_ID = '1rDCtdbiSRMxAAeqGSDDnPjE14nsiudEu'
-	const resumeId = locale.value === LANGUAGE.EN ? ENG_RESUME_ID : ESP_RESUME_ID
-
-	window.location.href = `https://drive.google.com/file/d/${resumeId}/view?usp=sharing`
 }
 </script>

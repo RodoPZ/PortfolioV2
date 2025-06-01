@@ -34,7 +34,10 @@
 							<GithubIcon size="32" />
 						</ButtonComponent>
 					</div>
-					<ButtonComponent :variant="BUTTON_VARIANT.OUTLINE">
+					<ButtonComponent
+						:variant="BUTTON_VARIANT.OUTLINE"
+						@click="downloadResume(locale as LANGUAGE)"
+					>
 						{{ $t('general.resume') }}
 					</ButtonComponent>
 				</div>
@@ -47,6 +50,11 @@
 import ButtonComponent from '@/components/ButtonComponent.vue'
 import { LinkedinIcon, MailIcon, GithubIcon } from '@/assets/icons'
 import { BUTTON_VARIANT } from '@/types'
+import { downloadResume } from '@/utils/index.ts'
+import type { LANGUAGE } from '@/types'
+import { useI18n } from 'vue-i18n'
+
+const { locale } = useI18n({ useScope: 'global' })
 
 const openEmail = () => {
 	window.open('mailto:rpinedo2799+bussines@gmail.com', '_blank')
