@@ -8,10 +8,19 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [vue(), vueJsx(), vueDevTools(), tailwindcss()],
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
-    },
-  },
+	base: process.env.NODE_ENV === 'production' ? '/PortfolioV2/' : '/',
+	plugins: [vue(), vueJsx(), vueDevTools(), tailwindcss()],
+	resolve: {
+		alias: {
+			'@': fileURLToPath(new URL('./src', import.meta.url)),
+		},
+	},
+	build: {
+		assetsDir: 'assets',
+		rollupOptions: {
+			output: {
+				assetFileNames: 'assets/[name]-[hash][extname]',
+			},
+		},
+	},
 })
