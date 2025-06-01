@@ -83,6 +83,9 @@ import { computed } from 'vue'
 
 const { t } = useI18n()
 
+// Import all images
+const images = import.meta.glob<{ default: string }>('@/assets/images/*.png', { eager: true })
+
 const projects = computed(() => [
 	{
 		name: 'Farm Defence',
@@ -93,7 +96,7 @@ const projects = computed(() => [
 			{ type: 'GitHub', href: 'https://github.com/RodoPZ/Farm-Defense' },
 			{ type: 'Web', href: 'https://croobat.itch.io/farm-defense' },
 		],
-		image: '/src/assets/images/FarmDefence.png',
+		image: images['/src/assets/images/FarmDefence.png'].default,
 	},
 	{
 		name: 'Clicker Miner',
@@ -104,7 +107,7 @@ const projects = computed(() => [
 			{ type: 'GitHub', href: 'https://github.com/RodoPZ/ClickerMiner' },
 			{ type: 'Web', href: 'https://croobat.itch.io/clicker-miner' },
 		],
-		image: '/src/assets/images/ClickerMiner.png',
+		image: images['/src/assets/images/ClickerMiner.png'].default,
 	},
 	{
 		name: 'Lacking Light',
@@ -115,7 +118,7 @@ const projects = computed(() => [
 			{ type: 'GitHub', href: 'https://github.com/croobat/lacking-light' },
 			{ type: 'Web', href: 'https://croobat.itch.io/lacking-light' },
 		],
-		image: '/src/assets/images/LackingLight.png',
+		image: images['/src/assets/images/LackingLight.png'].default,
 	},
 	{
 		name: 'Portfolio V1',
@@ -130,7 +133,7 @@ const projects = computed(() => [
 			},
 			{ type: 'Web', href: 'https://rodopz.github.io/Portfolio/' },
 		],
-		image: '/src/assets/images/PortfolioV1.png',
+		image: images['/src/assets/images/PortfolioV1.png'].default,
 	},
 	{
 		name: 'Portfolio V2',
@@ -138,7 +141,7 @@ const projects = computed(() => [
 		text: t('projects.projectList.3.description'),
 		tags: ['Vue', 'TypeScript', 'TailwindCSS'],
 		links: [{ type: 'GitHub', href: 'https://github.com/RodoPZ/PortfolioV2' }],
-		image: '/src/assets/images/Portfolio.png',
+		image: images['/src/assets/images/Portfolio.png'].default,
 	},
 	{
 		name: 'TT',
@@ -152,7 +155,7 @@ const projects = computed(() => [
 				href: 'https://drive.google.com/file/d/1upI9DDdjpoGhQ_D8L4jTMq09jLeLlDaJ/view?pli=1',
 			},
 		],
-		image: '/src/assets/images/TT.png',
+		image: images['/src/assets/images/TT.png'].default,
 	},
 	{
 		name: 'Weather App',
@@ -167,7 +170,7 @@ const projects = computed(() => [
 			},
 			{ type: 'Web', href: 'https://rodopz-weatherapp.netlify.app/London' },
 		],
-		image: '/src/assets/images/WeatherApp.png',
+		image: images['/src/assets/images/WeatherApp.png'].default,
 	},
 	{
 		name: 'Petgram',
@@ -178,7 +181,7 @@ const projects = computed(() => [
 			{ type: 'GitHub', href: 'https://github.com/RodoPZ/Petgram' },
 			{ type: 'Web', href: 'https://rodopz.github.io/Petgram/' },
 		],
-		image: '/src/assets/images/Petgram.png',
+		image: images['/src/assets/images/Petgram.png'].default,
 	},
 	{
 		name: 'MovieAPI',
@@ -193,7 +196,7 @@ const projects = computed(() => [
 			{ type: 'GitHub', href: 'https://github.com/RodoPZ/MovieAPI' },
 			{ type: 'Web', href: 'https://rodopz-movieapi.netlify.app/' },
 		],
-		image: '/src/assets/images/MovieAPI.png',
+		image: images['/src/assets/images/MovieAPI.png'].default,
 	},
 	{
 		name: 'Cashflow',
@@ -204,7 +207,7 @@ const projects = computed(() => [
 			{ type: 'GitHub', href: 'https://github.com/RodoPZ/CashFlow' },
 			{ type: 'Web', href: 'https://rodopz-cashflow.netlify.app/' },
 		],
-		image: '/src/assets/images/Cashflow.png',
+		image: images['/src/assets/images/Cashflow.png'].default,
 	},
 	{
 		name: 'Todo React',
@@ -215,7 +218,7 @@ const projects = computed(() => [
 			{ type: 'GitHub', href: 'https://github.com/RodoPZ/TODO_React' },
 			{ type: 'Web', href: 'https://rodopz.github.io/TODO_React/#/' },
 		],
-		image: '/src/assets/images/TodoApp.png',
+		image: images['/src/assets/images/TodoApp.png'].default,
 	},
 	{
 		name: 'Platzi Conf',
@@ -226,7 +229,7 @@ const projects = computed(() => [
 			{ type: 'GitHub', href: 'https://github.com/RodoPZ/Platzi-conf' },
 			{ type: 'Web', href: 'https://rodopz.github.io/Platzi-conf/' },
 		],
-		image: '/src/assets/images/PlatziConf.png',
+		image: images['/src/assets/images/PlatziConf.png'].default,
 	},
 ])
 

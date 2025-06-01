@@ -58,16 +58,14 @@
 		>
 			<PopoverPanel
 				focus
-				class="fixed inset-x-0 top-0 z-50 origin-top transform p-2 transition lg:hidden"
+				class="fixed inset-x-0 top-0 z-50 origin-top transform p-2 transition lg:hidden h-screen"
 			>
-				<div class="overflow-hidden rounded-lg bg-slate-700 shadow-md ring-1 ring-black/5">
+				<div
+					class="overflow-hidden rounded-lg bg-slate-700 shadow-md ring-1 ring-black/5 h-full"
+				>
 					<div class="flex items-center justify-between px-5 pt-4">
 						<div>
-							<img
-								class="h-8 w-auto"
-								src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?from-color=teal&from-shade=500&to-color=cyan&to-shade=600&toShade=600"
-								alt=""
-							/>
+							<p class="text-primary text-2xl font-bold">&lt;RodoPZ/&gt;</p>
 						</div>
 						<div class="-mr-2">
 							<PopoverButton
@@ -80,7 +78,7 @@
 						</div>
 					</div>
 					<div
-						class="pt-5 pb-20 space-y-1 px-2 flex flex-col gap-2 justify-center items-center"
+						class="pt-5 pb-20 space-y-1 px-2 flex flex-col gap-2 justify-start items-center h-full"
 					>
 						<ButtonComponent
 							:variant="BUTTON_VARIANT.TERTIARY"
@@ -90,16 +88,18 @@
 						>
 							{{ item.name }}
 						</ButtonComponent>
-						<ButtonComponent
-							:variant="BUTTON_VARIANT.OUTLINE"
-							@click="toggleLanguage()"
-						>
-							<LanguageIcon class="size-5" aria-hidden="true" />
-							{{ locale === 'es' ? 'ES' : 'EN' }}
-						</ButtonComponent>
-						<ButtonComponent @click="downloadResume(locale as LANGUAGE)">
-							{{ t('general.resume') }}
-						</ButtonComponent>
+						<div class="flex flex-row gap-4">
+							<ButtonComponent
+								:variant="BUTTON_VARIANT.OUTLINE"
+								@click="toggleLanguage()"
+							>
+								<LanguageIcon class="size-5" aria-hidden="true" />
+								{{ locale === 'es' ? 'ES' : 'EN' }}
+							</ButtonComponent>
+							<ButtonComponent @click="downloadResume(locale as LANGUAGE)">
+								{{ t('general.resume') }}
+							</ButtonComponent>
+						</div>
 					</div>
 				</div>
 			</PopoverPanel>
