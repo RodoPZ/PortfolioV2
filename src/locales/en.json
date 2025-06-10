@@ -59,6 +59,9 @@
 			},
 			"12": {
 				"description": "8-bit Godot roguelike with darkness mechanics where you have to collect keys to escape from the dungeon. We won third place in the Mini Jam 98 game jam with this game."
+			},
+			"13": {
+				"description": "Cold Turkey is a mobile app made in React Native to help people quit smoking. It offers sections like Diary, Health Progress, and Motivations to accompany the user. It is already finished and in the process of approval in the App Store and Google Play."
 			}
 		}
 	},

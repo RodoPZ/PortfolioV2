@@ -59,6 +59,9 @@
         },
         "12": {
           "description": "Roguelike de 8 bits con mecánicas de oscuridad donde debes recolectar llaves para escapar del calabozo. Ganamos el tercer lugar en el game jam Mini Jam 98 con este juego."
+        },
+        "13": {
+          "description": "Cold Turkey es una app móvil hecha en React Native para ayudar a dejar de fumar. Ofrece secciones como Diario, Progreso de salud y Motivaciones para acompañar al usuario. Está terminada y en proceso de aprobación en App Store y Google Play."
         }
       }
     },

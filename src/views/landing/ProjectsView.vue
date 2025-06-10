@@ -84,9 +84,18 @@ import { computed } from 'vue'
 const { t } = useI18n()
 
 // Import all images
-const images = import.meta.glob<{ default: string }>('@/assets/images/*.png', { eager: true })
+const images = import.meta.glob<{ default: string }>('@/assets/images/*.{png,jpeg}', {
+	eager: true,
+})
 
 const projects = computed(() => [
+	{
+		name: 'Cold Turkey',
+		emojis: '🥶🚭',
+		text: t('projects.projectList.13.description'),
+		tags: ['Native', 'TypeScript', 'Expo'],
+		image: images['/src/assets/images/ColdTurkey.jpeg'].default,
+	},
 	{
 		name: 'Farm Defence',
 		emojis: '🐮💀',
